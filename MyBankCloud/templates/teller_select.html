@@ -1,0 +1,116 @@
+{% extends 'teller_index.html' %}
+
+{% block title %}
+    <title>查询</title>
+{% endblock %}
+{% block style %}
+    <style>
+        body{
+	background:#eee;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bg img{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height:100%;
+	opacity: 0.6;
+	z-index: -100;
+}
+.main{
+	margin:7em auto 0;
+	width:25%;
+	background: #fff;
+	border-radius: 10px;
+}
+.header {
+	text-align:center;
+	padding:1.3em;
+}
+.header h1 {
+	color:#272727;
+	font-weight:700;
+	font-size:22px;
+}
+p{
+	font-size:15px;
+	font-weight:600;
+	color:#383737;
+	padding: 20px 30px;
+	border-bottom: 1px solid #E7E0E0;
+	margin-top: -13px;
+}
+.main h2,.main h3{
+	text-align:left;
+	font-size:17px;
+	font-weight:600;
+	margin:15px 3px;
+	color:#3F3D3D;
+}
+    </style>
+
+{% endblock %}
+
+
+{% block article %}
+<article>
+    <div class="bg">
+        <h1 align="center">MyBank柜员查询系统</h1>
+        <form action="/tellerIndex" method="post">
+            <h2 style="color: red" align="center">{{ params.msg }}</h2>
+        <p>
+            请输入要查寻用户的身份证号码:
+            <input type="text" name="userid" placeholder="请输入身份证号码" minlength="18" maxlength="18" style="width: 229px;">
+        </p>
+            <p align="center">
+                <input style="width: 150px; height: 80px; border-radius: 20%; background: lightblue; font-size: 30px" type="submit" value="查询">
+            </p>
+        </form>
+        <form action="/tellerIndex" method="get">
+            <p>－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</p>
+            <h2>查询结果如下:</h2>
+            <br><br>
+        <h1 align="center">用户基本信息</h1>
+        <p>
+            用户姓名:{{ params.baseinfo.username }}
+        </p>
+        <p>
+            性别:{{ params.baseinfo.usersex }}
+        </p>
+        <p>
+            身份证号:{{ params.baseinfo.idcard }}
+        </p>
+        <p>
+            联系电话:{{ params.baseinfo.userphone }}
+        </p>
+        <p>
+            帐号状态:{{ params.baseinfo.isActive }}
+        </p>
+        <h1 align="center">用户所持有银行卡</h1>
+        {% for bankcard in params.userinfos %}
+        <p>－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</p>
+        <p>
+            银行卡:
+            {{ bankcard.banknum }}
+            </p>
+        <p>
+            银行名:
+            {{ bankcard.bankname }}
+        </p>
+            <p>
+            卡型:
+            {{ bankcard.banktype }}
+        </p>
+        <p>
+            开户名:
+            {{ bankcard.username }}
+        </p>
+        <p>
+            余额:
+            {{ bankcard.balance }}
+        </p>
+        {% endfor %}
+        </form>
+    </div>
+</article>
+{% endblock %}

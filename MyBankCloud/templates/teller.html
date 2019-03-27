@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBank柜员登录</title>
+    <style>
+        p{
+            padding-left: 30px;
+        }
+
+         input:focus{
+             border: 3px solid #007cdc;
+             outline: double #007cdc;
+             -webkit-box-shadow: 0px 0px 6px #007cdc;
+             -moz-box-shadow: 0px 0px 6px #007cdc;
+             box-shadow: 0px 0px 6px #007cdc;
+             -webkit-transition: border linear .2s,box-shadow linear .2s;
+             -moz-transition: border linear .2s,box-shadow linear .2s;
+             -o-transition: border linear .2s,box-shadow linear .2s;
+             transition: border linear .2s,box-shadow linear .2s;
+         }
+    </style>
+
+</head>
+<body style="background: url('../static/images/background08.jpeg'),no-repeat center 0">
+    <div style="background-color: skyblue;width: 400px;border:3px solid darkgray;overflow: hidden;margin: auto;margin-top: 200px;border-radius: 10%">
+        <form action="/teller" method="post">
+            <p>
+                <h2 align="center">柜员登录界面</h2>
+            </p>
+            <h2 style="color: red" align="center">{{ msg }}</h2>
+            <p>柜员账号:
+                <input type="text" name="tellername" minlength="18" maxlength="18" placeholder="请输入身份证号">
+            </p>
+            <p>
+                柜员密码:
+                <input type="password" name="tpwd" placeholder="请输入密码">
+            </p>
+
+            <p style="float: right; padding-right: 11%">
+                <input type="submit" value="登录">
+            </p>
+            <p>
+                <a href="http://120.78.178.235:5000/teller-register">柜员注册</a>
+                <a href="###">忘记密码</a>
+                <a href="http://120.78.178.235:5000/">用户登录</a>
+            </p>
+        </form>
+    </div>
+</body>
+</body>
+</html>

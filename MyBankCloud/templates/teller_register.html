@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBank柜员注册</title>
+    <style>
+        p{
+            padding-left: 30px;
+        }
+         input:focus{
+             border: 1px solid #007cdc;
+             outline: double #007cdc;
+             -webkit-box-shadow: 0px 0px 6px #007cdc;
+             -moz-box-shadow: 0px 0px 6px #007cdc;
+             box-shadow: 0px 0px 6px #007cdc;
+             -webkit-transition: border linear .2s,box-shadow linear .2s;
+             -moz-transition: border linear .2s,box-shadow linear .2s;
+             -o-transition: border linear .2s,box-shadow linear .2s;
+             transition: border linear .2s,box-shadow linear .2s;
+         }
+    </style>
+</head>
+<body style="background: url('../static/images/Firefox_wallpaper.png'),no-repeat center 0">
+    <div style="background-color: #999ccc;width: 400px;border:3px solid darkgray;overflow: hidden;margin: auto;margin-top: 200px;border-radius: 10%">
+        <form action="/teller-register" method="post" enctype="multipart/form-data">
+            <p>
+                <h2 align="center">柜员注册界面</h2>
+            </p>
+            <h2 style="color: red" align="center">{{ msg }}</h2>
+            <p>柜员姓名:
+                <input type="text" name="tellname" placeholder="请输入您的姓名">
+            </p>
+            <p>
+                身份证号:
+                <input type="text" name="idcard" placeholder="请输入您的身份证号码" minlength="18" maxlength="18" style="width: 229px;">
+            </p>
+            <p>
+                登录密码:
+                <input type="password" name="tellpwd" minlength="6" placeholder="请输入密码(6位以上)">
+            </p>
+            <p>
+                确认密码:
+                <input type="password" name="tellpwd2" minlength="6" placeholder="请再次输入密码">
+            </p>
+            <p style="float: right; padding-right: 45%">
+                <input type="submit" value="注册">
+            </p>
+            <p style="float: right; padding-right: 10%">
+                <a href="http://120.78.178.235:5000/teller">返回柜员登录界面</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

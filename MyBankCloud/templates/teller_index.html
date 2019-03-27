@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>MyBank柜员首页</title>
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/bitbug_favicon.ico" type="image/x-icon" />
+    <link href="/static/css/base.css" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link href="/static/css/m.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/js/jquery.easyfader.min.js"></script>
+    <script src="/static/js/scrollReveal.js"></script>
+    <script src="/static/js/common.js"></script>
+  {% block style %}
+  {% endblock %}
+</head>
+<body>
+
+<header id="header">
+    <div class="menu">
+      <nav class="nav" id="topnav">
+        <h1 class="logo"><a href="">MyBank</a></h1>
+        <li><a href="http://120.78.178.235:5000/teller">银行首页</a> </li>
+        <li><a href="http://120.78.178.235:5000/tellerIndex">柜员选项</a>
+          <ul class="sub-nav">
+            <li><a href="http://120.78.178.235:5000/tellerIndex">查询用户</a></li>
+            <li><a href="http://120.78.178.235:5000/froggen">激活/冻结</a></li>
+            <li><a href="http://120.78.178.235:5000/teller">Hello World</a></li>
+          </ul>
+        </li>
+        <li><a href="http://120.78.178.235:5000/telleractive">操作记录</a></li>
+          <li><a href="http://120.78.178.235:5000/telabout">关于Mybank</a> </li>
+      </nav>
+{% block a %}
+        {% if params %}
+        <a id="logina">
+            柜员:{{params.teller.tellername}}
+        </a>
+        <a href="http://120.78.178.235:5000/index" id="registera">退出</a>
+        {% else %}
+        <a href="http://120.78.178.235:5000/" id="login" target="_blank">登录</a>
+        <a href="http://120.78.178.235:5000/teller-register" id="register" target="_blank">注册</a>
+        {% endif %}
+      {% endblock %}
+    </div>
+</header>>
+{% block article %}
+ <article>
+<!--banner begin-->
+    <div class="picsbox">
+      <div class="banner">
+        <div id="banner" class="fader">
+          <li class="slide"><a href="info.html" target="_blank"><img src="/static/images/background07.jpeg"><span class="imginfo">以习近平新时代中国特色社会主义思想为指导
+                </span></a></li>
+          <li class="slide"><a href="info.html" target="_blank"><img src="/static/images/background08.jpeg"><span class="imginfo">坚持科技引领、创新驱动、转型求实、变革图强</span></a></li>
+          <li class="slide"><a href="info.html" target="_blank"><img src="/static/images/002.jpeg"><span class="imginfo">把MyBank银行建设成为新时代全球一流银行</span></a></li>
+          <div class="fader_controls">
+            <div class="page prev" data-target="prev">&lsaquo;</div>
+            <div class="page next" data-target="next">&rsaquo;</div>
+            <ul class="pager_list">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--banner end-->
+      <div class="toppic">
+        <li> <a href="info.html" target="_blank"> <i><img src="/static/images/006.jpeg"></i>
+            <h2>中国银行成为北京奥运会唯一的银行合作伙伴</h2>
+            <span>MyBank & BeiJing</span>
+          </a> </li>
+        <li> <a href="info.html" target="_blank"> <i><img src="/static/images/005.jpg"></i>
+            <h2>中国银行在英国《银行家》杂志“世界1000家大银行”排名中列第十一位</h2>
+            <span>Hello MyBank!</span>
+          </a> </li>
+      </div>
+    </div>
+    <div class="blank"></div>
+    <!--blogsbox begin-->
+    <div class="blogsbox">
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">接受存款机构、商业银行、一般银行 </a></h3>
+        <span class="blogpic"><a href="info.html" title=""><img src="/static/images/001.jpeg" alt=""></a></span>
+        <p class="blogtext">银行一词，源于意大利Banca，其原意是长凳、椅子，是最早的市场上货币兑换商的营业用具。英语转化为Bank，意为存钱的柜子。在我国，之所以有“银行”之称，则与我国经济发展的历史相关
+        ...</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">第一阶段：出现了货币兑换业和兑换商。 </a></h3>
+        <p class="blogtext">在我国历史上，白银一直是主要的货币材料之一。“银”往往代表的就是货币，而“行”则是对大商业机构的称谓。把办理与银钱有关的大金融机构称为银行，最早见于太平天国洪仁玕所著的《资政新篇》...</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view">14567已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">第一阶段：出现了货币兑换业和兑换商。</a></h3>
+        <span class="bplist"><a href="info.html" title="">
+            <li><img src="/static/images/backgound01.png" alt=""></li>
+            <li><img src="/static/images/background02.jpg" alt=""></li>
+            <li><img src="/static/images/x002.jpg" alt=""></li>
+          </a></span>
+        <p class="blogtext">一般认为最早的银行是意大利1407年在威尼斯成立的银行。其后，荷兰在阿姆斯特丹、德国在汉堡、英国在伦敦也相继设立了银行。十八世纪末至十九世纪初，银行得到了普遍发展... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>3257</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">MyBank1.1</a></h3>
+        <span class="bigpic"><a href="info.html" title=""><img src="/static/images/background04.jpeg" alt=""></a></span>
+        <p class="blogtext">一般认为最早的银行是意大利1407年在威尼斯成立的银行。其后，荷兰在阿姆斯特丹、德国在汉堡、英国在伦敦也相继设立了银行。十八世纪末至十九世纪初，银行得到了普遍发展... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">MyBank1.2</a></h3>
+        <span class="blogpic"><a href="info.html" title=""><img src="/static/images/background05.jpeg" alt=""></a></span>
+        <p class="blogtext">一般认为最早的银行是意大利1407年在威尼斯成立的银行。其后，荷兰在阿姆斯特丹、德国在汉堡、英国在伦敦也相继设立了银行。十八世纪末至十九世纪初，银行得到了普遍发展... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">一般认为最早的银行是意大利1407年在威尼斯成立的银行。其后，荷兰在阿姆斯特丹、德国在汉堡、英国在伦敦也相继设立了银行。十八世纪末至十九世纪初，银行得到了普遍发展.........</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view">4567已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">MuBank1.4 </a></h3>
+        <span class="bplist"><a href="info.html" title="">
+            <li><img src="/static/images/background06.jpeg" alt=""></li>
+            <li><img src="/static/images/background07.jpeg" alt=""></li>
+            <li><img src="/static/images/background08.jpeg" alt=""></li>
+          </a></span>
+        <p class="blogtext">一般认为最早的银行是意大利1407年在威尼斯成立的银行。其后，荷兰在阿姆斯特丹、德国在汉堡、英国在伦敦也相继设立了银行。十八世纪末至十九世纪初，银行得到了普遍发展...
+          ...</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">MyBank</a></h3>
+        <span class="blogpic"><a href="info.html" title=""><img src="/static/images/bitbug_favicon.ico" alt=""></a></span>
+        <p class="blogtext">MyBank,经孙中山先生批准，于1912年2月5日正式成立。
+          总行位于北京复兴门内大街1号，是中央管理的大型国有银行， 国家副部级单位。
+          中国银行作为中国共产党领导下的国有金融机构，以习近平新时代中国特色社会主义思想为指导。
+          中国银行是香港、澳门地区的发钞行，业务范围涵盖商业银行、投资银行、基金、保险、航空租赁等... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">BANK OF CHINA</a></h3>
+        <p class="blogtext">实现战略目标分“三步走”：到2020年我国全面建成小康社会之际，达到发展基础进一步夯实，特色优势进一步巩固，体制机制进一步完善，综合实力进一步增强......</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view">4567已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">北京复兴门内大街1号</a></h3>
+        <span class="bplist"><a href="info.html" title="">
+            <li><img src="/static/images/003.jpeg" alt=""></li>
+            <li><img src="/static/images/001.jpeg" alt=""></li>
+            <li><img src="/static/images/002.jpeg" alt=""></li>
+          </a></span>
+        <p class="blogtext">2017年6月，《2017年BrandZ最具价值全球品牌100强》公布，中国银行排名第94位。2018年2月，Brand Finance发布2018年度全球500强品牌榜单，中国银行排名第18位。 2018年《财富》世界500强排名第46位...</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">金融重器</a></h3>
+        <span class="bigpic"><a href="info.html" title=""><img src="/static/images/004.jpg" alt=""></a></span>
+        <p class="blogtext">中国银行于1912年经孙中山先生批准在上海成立，是中国历史最为悠久的银行之一... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">建设新时代全球一流银行</a></h3>
+        <span class="blogpic"><a href="info.html" title=""><img src="/static/images/005.jpg" alt=""></a></span>
+        <p class="blogtext">2018年12月，世界品牌实验室独家编制的2018年度（第十五届）《世界品牌500强》排行榜在美国纽约揭晓，中国银行排名第198... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">担当,诚信,专业,创新,稳健,绩效</a></h3>
+        <p class="blogtext">1912－1928年，中国银行履行中央银行职能，负责代理国库、承汇公款、发行钞票等.......</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view">4567已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">中央企业（副部级单位）</a></h3>
+        <span class="bplist"><a href="info.html" title="">
+            <li><img src="/static/images/backgound01.png" alt=""></li>
+            <li><img src="/static/images/background04.jpeg" alt=""></li>
+            <li><img src="/static/images/background07.jpeg" alt=""></li>
+          </a></span>
+        <p class="blogtext">1928－1942年，中国银行作为政府特许的国际汇兑银行，积极借鉴国际先进经验改革管理机制，在中国金融界率先走向国际市场，
+          先后在伦敦、新加坡、纽约等国际金融中心设立分行... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">坚持进行货币斗争，抵制日伪金融侵略</a></h3>
+        <span class="bigpic"><a href="info.html" title=""><img src="/static/images/006.jpeg" alt=""></a></span>
+        <p class="blogtext">银行标志是由香港著名设计师靳埭强先生设计，采用了中国古钱与“中”字为基本形，古钱图形是圆与形的框线设计，中间方孔，上下加垂直线，成为“中”字形状，寓意天方地圆，经济为本，给人的感觉是简洁、稳重、易识别，寓意深刻，颇具中国风格...
+        </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">加强钞券调运，供应抗战需要</a></h3>
+        <p class="blogtext">1949年以后，中国银行长期作为国家外汇外贸专业银行，统一经营管理国家外汇，开展国际贸易结算、侨汇和其他非贸易外汇业务，
+          大力支持外贸发展和经济建设。改革开放以来，中国银行牢牢抓住国家利用国外资金和先进技术加快经济建设的历史机遇，充分发挥长期经营外汇业务的独特优势，成为国家利用外资的主渠道...</p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view">4567已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">平衡上海汇市，全力维持汇价 </a></h3>
+        <span class="bplist"><a href="info.html" title="">
+            <li><img src="/static/images/x001.jpg" alt=""></li>
+            <li><img src="/static/images/x002.jpg" alt=""></li>
+            <li><img src="/static/images/001.jpeg" alt=""></li>
+          </a></span>
+        <p class="blogtext">1942－1949年，中国银行作为国际贸易专业银行，负责政府国外款项收付，发展国外贸易并办理有关贷款与投资... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blogs" data-scroll-reveal="enter bottom over 1s">
+        <h3 class="blogtitle"><a href="info.html" target="_blank">努力争取侨汇，积极支持抗战</a></h3>
+        <span class="bigpic"><a href="info.html" title=""><img src="/static/images/002.jpeg" alt=""></a></span>
+        <p class="blogtext">中国银行是中国唯一持续经营超过百年的银行，也是中国国际化和多元化程度最高的银行。
+          机构遍及中国内地及56个国家和地区，旗下有中银国际、中银投资、中银基金、中银保险、中银航空租赁、中银消费金融、中银金融商务、中银香港等控股金融机构。
+          2016年，中国银行再次入选全球系统重要性银行，成为新兴市场经济体中唯一连续6年入选的金融机构。
+          2017年7月，英国《银行家》杂志公布了《全球1000家大银行排行榜》，中国银行排名第4位... </p>
+        <div class="bloginfo">
+          <ul>
+            <li class="author"><a href="info.html">@张嘉伦</a></li>
+            <li class="lmname"><a href="info.html">AlexDui</a></li>
+            <li class="timer">2019-2-28</li>
+            <li class="view"><span>34567</span>已阅读</li>
+            <li class="like"><span>6666</span>喜欢</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--blogsbox end-->
+    <div class="sidebar">
+      <div class="zhuanti">
+        <h2 class="hometitle">特别推荐</h2>
+        <ul>
+          <li> <i><img src="/static/images/background04.jpeg"></i>
+            <p>MyBank1.5开发环境 <span><a href="#">阅读</a></span> </p>
+          </li>
+          <li> <i><img src="/static/images/background08.jpeg"></i>
+            <p>MyBank设计<span><a href="#">阅读</a></span></p>
+          </li>
+          <li> <i><img src="/static/images/backgound01.png"></i>
+            <p>MyBank1.6规划<span><a href="#">阅读</a></span></p>
+          </li>
+        </ul>
+      </div>
+      <div class="tuijian">
+        <h2 class="hometitle">推荐文章</h2>
+        <ul class="tjpic">
+          <i><img src="/static/images/001.jpeg"></i>
+          <p><a href="#">《环球金融》“中国最佳贸易融资银行”</a></p>
+        </ul>
+        <ul class="sidenews">
+          <li> <i><img src="/static/images/002.jpeg"></i>
+            <p><a href="#">中国银行行标于1986年经中国银行总行批准正式使用</a></p>
+            <span>2018-05-13</span>
+          </li>
+          <li> <i><img src="/static/images/003.jpeg"></i>
+            <p><a href="#">永不停滞、永不僵化，敢于大胆探索，善于博采众长，勇于推陈出新</a></p>
+            <span>2018-05-13</span>
+          </li>
+          <li> <i><img src="/static/images/004.jpg"></i>
+            <p><a href="#">坚守风险底线，坚持合规经营，遵循发展规律，实现行稳致远</a></p>
+            <span>2018-05-13</span>
+          </li>
+          <li> <i><img src="/static/images/005.jpg"></i>
+            <p><a href="#">本领高强，业务精湛，发扬工匠精神，做到精益求精</a></p>
+            <span>2018-05-13</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tuijian">
+        <h2 class="hometitle">点击排行</h2>
+        <ul class="tjpic">
+          <i><img src="/static/images/006.jpeg"></i>
+          <p><a href="#">重承诺，守信用，言行相符，表里如一，襟怀坦荡，诚实无欺</a></p>
+        </ul>
+        <ul class="sidenews">
+          <li> <i><img src="/static/images/x001.jpg"></i>
+            <p><a href="#">中国银行获得大商所首批综合业务指定存管银行资格</a></p>
+            <span>2018-05-13</span>
+          </li>
+          <li> <i><img src="/static/images/background08.jpeg"></i>
+            <p><a href="#">银保监会批准中国银行设立理财子公司</a></p>
+            <span>2018-05-13</span>
+          </li>
+          <li> <i><img src="/static/images/x002.jpg"></i>
+            <p><a href="#">P在2017年中国企业500强中，中国银行排名第10位</a></p>
+            <span>2018-05-13</span>
+          </li>
+          <li> <i><img src="/static/images/background04.jpeg"></i>
+            <p><a href="#">2018中国品牌价值百强榜”发布，中国银行位列第11</a></p>
+            <span>2018-05-13</span>
+          </li>
+        </ul>
+      </div>
+      <div class="cloud">
+        <h2 class="hometitle">标签云</h2>
+        <ul>
+          <a href="#">AlexDui</a> <a href="#">校园生活</a> <a href="#">html5</a> <a href="#">SumSung</a> <a href="#">青春</a> <a
+            href="#">温暖</a> <a href="#">阳光</a> <a href="#">三星</a><a href="#">索尼</a> <a href="#">华维荣耀</a> <a href="#">三星</a>
+          <a href="#">索尼</a>
+        </ul>
+      </div>
+      <div class="links">
+        <h2 class="hometitle">友情链接</h2>
+        <ul>
+          <li><a href="#" target="_blank">MyBank</a></li>
+          <li><a href="#" target="_blank">境内外融资</a></li>
+          <li><a href="#" target="_blank">外币保值</a></li>
+          <li><a href="#" target="_blank">资金管理</a></li>
+          <li><a href="#" target="_blank">债务保值</a></li>
+          <li><a href="#" target="_blank">资金清算</a></li>
+          <li><a href="#" target="_blank">同业拆借</a></li>
+          <li><a href="#" target="_blank">委托收款</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <footer id="footer">
+    <p>Design by <a href=# target="_blank">MyBank</a> <a href="#">20190301</a></p>
+  </footer>
+  <a href="#" class="cd-top">Top</a>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% extends 'teller_index.html' %}
+
+{% block title %}
+    <title>关于</title>
+{% endblock %}
+{% block style %}
+    <style>
+        body{
+	background:#eee;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bg img{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height:100%;
+	opacity: 0.6;
+	z-index: -100;
+}
+.main{
+	margin:7em auto 0;
+	width:25%;
+	background: #fff;
+	border-radius: 10px;
+}
+.header {
+	text-align:center;
+	padding:1.3em;
+}
+.header h1 {
+	color:#272727;
+	font-weight:700;
+	font-size:22px;
+}
+p{
+	font-size:15px;
+	font-weight:600;
+	color:#383737;
+	padding: 20px 30px;
+	border-bottom: 1px solid #E7E0E0;
+	margin-top: -13px;
+}
+.main h2,.main h3{
+	text-align:left;
+	font-size:17px;
+	font-weight:600;
+	margin:15px 3px;
+	color:#3F3D3D;
+}
+    </style>
+
+{% endblock %}
+
+
+{% block article %}
+<article>
+    <div class="bg">
+        <h1 align="center">关于MyBank</h1>
+        <br>
+        <h2>截止 {{ params.now_time }} 为止:</h2>
+        <h3>本系统共有: {{ params.usernum }} 位用户</h3>
+        <h3>共开办银行卡数有: {{ params.cardnum }} 张</h3>
+        <h3>共完成: {{ params.moneynum }} 笔交易</h3>
+        <h3>柜员共提供给用户: {{ params.tellerserver }} 次服务</h3>
+    </div>
+</article>
+{% endblock %}
+

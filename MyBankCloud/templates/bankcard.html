@@ -1,0 +1,103 @@
+{% extends 'second.html' %}
+
+{% block title %}
+    <title>开户</title>
+{% endblock %}
+{% block style %}
+    <style>
+        body{
+	background:#eee;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bg img{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height:100%;
+	opacity: 0.6;
+	z-index: -100;
+}
+.main{
+	margin:7em auto 0;
+	width:25%;
+	background: #fff;
+	border-radius: 10px;
+}
+.header {
+	text-align:center;
+	padding:1.3em;
+}
+.header h1 {
+	color:#272727;
+	font-weight:700;
+	font-size:22px;
+}
+p{
+	font-size:15px;
+	font-weight:600;
+	color:#383737;
+	padding: 20px 30px;
+	border-bottom: 1px solid #E7E0E0;
+	margin-top: -13px;
+}
+.main h2,.main h3{
+	text-align:left;
+	font-size:17px;
+	font-weight:600;
+	margin:15px 3px;
+	color:#3F3D3D;
+}
+    </style>
+
+{% endblock %}
+
+
+{% block article %}
+<article>
+    <div class="bg">
+        <h1 align="center">MyBank用户开户界面</h1>
+        <form action="/bankcard" method="post">
+            <h2 style="color: red" align="center">{{ params.msg }}</h2>
+        <p>
+            请选择要办理的银行:
+            <select name="bankname">
+                <option>-----选择银行-----</option>
+                <option>MyBank</option>
+                <option>中国银行</option>
+                <option>建设银行</option>
+                <option>工商银行</option>
+                <option>华夏银行</option>
+            </select>
+        </p>
+        <p class="classification">
+            请选择本银行卡的类型:
+            <input name="cardtype" type="radio" value="借记卡">借记卡
+            <input name="cardtype" type="radio" value="贷记卡">贷记卡
+        </p>
+        <p>
+            随机生成的一个卡号(可刷新更换):
+            <span>{{ params.bankcardnum }}</span>
+        </p>
+            <p>
+            开户人姓名:
+            <span>{{ params.card.username }}</span>
+        </p>
+        <p>
+            开户人身份证号:
+            <span>{{ params.card.idcard }}</span>
+        </p>
+        <p>
+            请设置本卡支付密码:
+            <input type="password" name="bankcardpwd" placeholder="请输入6位支付密码" maxlength="6">
+        </p>
+        <p>
+            请确认本卡支付密码:
+            <input type="password" name="bankcardpwd2" placeholder="请输入6位支付密码" maxlength="6">
+        </p>
+        <p style="text-align: center;">
+            <input type="submit" value="申请一张银行卡">
+        </p>
+        </form>
+    </div>
+</article>
+{% endblock %}
